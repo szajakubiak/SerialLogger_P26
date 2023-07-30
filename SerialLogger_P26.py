@@ -24,7 +24,7 @@ file.close()
 
 try:
     while True:
-        ser_p26.flush()
+        ser_p26.reset_input_buffer()
         ser_p26.write(command_p26.encode())
         p26_press = ""
         p26_press = ser_p26.readline().decode().rstrip()[3:-3]
